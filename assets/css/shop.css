@@ -1,0 +1,245 @@
+.homepage {
+    background: url(../imgs/shop-background.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    min-height: 500px;
+}
+
+.homepage img {
+    width: 650px;
+    position: relative;
+    top: 60px;
+}
+
+.homepage p {
+    display: block;
+    margin: auto;
+    margin-top: 42px;
+    color: var(--white-color);
+    width: 700px;
+}
+
+.homepage button {
+    margin-top: 20px;
+}
+
+.box-heading {
+    text-align: center;
+    margin: 76px 0 24px;
+}
+
+.box-heading h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: var(--black-color);
+}
+
+.box-heading::after {
+    content: "";
+    border-bottom: 2px solid #93000f;
+    display: block;
+    margin-left: 0;
+    text-align: center;
+    margin: 26px auto 0px;
+    width: 80px;
+    transition: all .5s ease 0s;
+}
+
+.box-heading:hover::after {
+    width: 120px;
+}
+
+/* Category */
+.cate-img {
+    margin-bottom: 10px;
+}
+
+.cate-img a img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.cate-details {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.cate-subtitle {
+    color: #93000f;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+}
+
+.cate-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 0.5px;
+    transition: .2s;
+}
+
+.cate-title a:hover {
+    color: #93000f;
+}
+
+.cate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #93000f;
+    opacity: 0;
+    transition: all 700ms ease 0s;
+}
+
+.cate-btn:hover {
+    background-color: var(--black-color);
+    transition: .4s;
+}
+
+.cate-btn a {
+    position: relative;
+    right: -1px;
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 8px 10px;
+}
+
+.cate--hover:hover .cate-img a img {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.cate--hover:hover .cate-btn {
+    opacity: 1;
+}
+
+/* Products */
+.product-img {
+    position: relative;
+    margin-bottom: 10px;
+    transition: .4s;
+}
+
+.product-img a img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Icon group */
+.product-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: .3s;
+    z-index: 99;
+}
+
+.product-img:hover a img {
+    opacity: .6;
+}
+
+.product-img:hover .product-btn-group {
+    opacity: 1;
+}
+
+.product-btn {
+    position: relative;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    background: var(--black-color);
+    padding: 8px 10px;
+    margin: 0 3px;
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.product-btn:hover {
+    background: #93000f;
+}
+
+.product-btn[data-title]::after {
+    content: attr(data-title);
+    position: absolute;
+    top: -90%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    background: #262626;
+    padding: 4px 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.product-btn[data-title]:hover::after {
+    opacity: 1;
+    transition: all .1s ease 0.5s;
+    visibility: visible;
+}
+
+.product-details {
+    margin-bottom: 24px;
+}
+
+.product-rating i {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.product-star--gold {
+    color: #ffce3e;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--black-color);
+    margin-top: 2px;
+}
+
+/* Footer */
+.footer-before {
+    padding: 60px 0;
+}
+
+.service-icon {
+    margin-bottom: 8px;
+}
+
+.service-icon i {
+    font-size: 2.6rem;
+}
+
+.service-details {
+    width: 100%;
+}
+
+.service-heading {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: 0.8px;
+}
+
+.service-des {
+    color: #888888;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
