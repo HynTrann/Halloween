@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/login.css">
+
+    <!-- Slick Slider -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <p>Please login</p>
+        <div class="title">
+            <button class="tablinks" id="changeTabLogin">Login</button>
+            <button class="tablinks" id="changeTabSignUp">Sign Up</button>
+        </div>
+        <form id="login" class="tabcontent">
+            <div class="form-input">
+                <label for="emailLogin">Email</label>
+                <input type="text" id="emailLogin" name="emailLogin" placeholder="Enter email here" />
+            </div>
+            <div class="form-input">
+                <label for="passwordLogin">Password</label>
+                <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Enter password here"/>
+            </div>
+            <button>Login</button>
+        </form>
+
+        <form id="signUp" class="tabcontent">
+            <div class="form-input">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter email here" />
+            </div>
+            <div class="form-input">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password here" />
+            </div>
+            <div class="form-input">
+                <label for="password">Confirm Password</label>
+                <input type="password" id="comfirmPassword" name="confirmPassword" placeholder="Enter password here" />
+            </div>
+            <button id="submitRegister">Sign up</button>
+        </form>
+    </div>
+
+    <script type="module" src="../../assets/js/main.js"></script>
+    <script type="module" src="../../assets/js/login.js"></script>
+</body>
+
+</html>
