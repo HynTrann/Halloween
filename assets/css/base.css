@@ -40,6 +40,10 @@ body {
     margin-top: 8px;
 }
 
+.mg-top-16 {
+    margin-top: 16px;
+}
+
 .mg-top-18 {
     margin-top: 18px;
 }
@@ -53,7 +57,7 @@ body {
     color: var(--white-color);
     text-shadow: 0 1px 0 rgb(0 0 0 / 9%);
     background: #080500;
-    padding: 0 18px 0;
+    padding: 0 18px;
     border-radius: 16px;
     text-align: center;
     line-height: 2.6rem;

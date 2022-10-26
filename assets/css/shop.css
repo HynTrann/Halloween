@@ -22,6 +22,12 @@
 
 .homepage button {
     margin-top: 20px;
+    background: none;
+    border: none;
+}
+
+.homepage button a {
+    padding: 4px 20px;
 }
 
 .box-heading {
@@ -213,9 +219,11 @@
     margin-top: 2px;
 }
 
-/* Footer */
+/* Footer before */
 .footer-before {
     padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #2a2a2a;
 }
 
 .service-icon {
@@ -242,4 +250,122 @@
     color: #888888;
     font-size: 1.2rem;
     font-weight: 400;
+}
+
+.icon--relative {
+    position: relative;
+}
+
+.icon--absolute {
+    position: absolute;
+    top: 30%;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 1rem !important;
+    color: var(--black-color);
+}
+
+/* Footer blocks */
+.footer-blocks {
+    padding: 60px 0;
+}
+
+.footer-logo a {
+    color: var(--white-color);
+}
+
+.footer-desc {
+    margin-top: 16px;
+    font-size: 1.1rem;
+    letter-spacing: 0.7px;
+    color: #888888;
+    margin-bottom: 24px;
+}
+
+.footer-download {
+    display: flex;
+    justify-content: space-between;
+}
+
+.appstore img,
+.googleplay img {
+    height: 34px;
+}
+
+.footer-heading {
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+.info-item {
+    margin-bottom: 2px;
+    color: #888888;
+    cursor: pointer;
+    letter-spacing: 0.7px;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 2.6rem;
+}
+
+.info-item a {
+    position: relative;
+    right: 0;
+    font-size: 1.1rem;
+    color: #888888;
+    transition: right linear .3s;
+}
+
+.info-item a:hover {
+    right: -5px;
+    color: var(--white-color);
+}
+
+.email-form {
+    position: relative;
+}
+
+.email-form input {
+    background: transparent;
+    width: 100%;
+    outline: none;
+    padding-left: 6px;
+    height: 32px;
+    color: #f6f6f6;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: .4px;
+    line-height: 2rem;
+    margin: 20px 0;
+    border: 0;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.emailSubmit-btn {
+    position: absolute;
+    top: 24px;
+    right: 6px;
+    font-size: 1.6rem;
+    background: none;
+    color: #888888;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.emailSubmit-btn:hover {
+    color: #93000f;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.social-contact li a {
+    color: #888888;
+    font-size: 1.6rem;
+}
+
+.social-contact li a:hover {
+    color: var(--white-color);
 }
