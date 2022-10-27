@@ -32,7 +32,7 @@
 
 .box-heading {
     text-align: center;
-    margin: 76px 0 24px;
+    margin: 76px 0 30px;
 }
 
 .box-heading h1 {
@@ -81,10 +81,19 @@
 }
 
 .cate-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.cate-title a {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    height: 3.6rem;
+    letter-spacing: .3px;
     color: #000000;
-    letter-spacing: 0.5px;
     transition: .2s;
 }
 
@@ -126,25 +135,64 @@
     opacity: 1;
 }
 
+.specialCate-heading {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: #484a49;
+    letter-spacing: -0.05em;
+    margin-bottom: 24px;
+}
+
+.specialCate-img {
+    width: 100%;
+    height: 100%;
+}
+
+.specialCate-text {
+    font-size: 1.4rem;
+}
+
 /* Products */
+.product-item {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+    overflow: unset;
+    transition: .4s;
+}
+
+.product-item:hover {
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 5%);
+    transform: translateY(-2px);
+}
+
+.slick-list {
+    margin: 0 -12px;
+    padding: 12px;
+}
+
 .product-img {
     position: relative;
     margin-bottom: 10px;
     transition: .4s;
 }
 
-.product-img a img {
-    width: 100%;
+.background-img {
     border-radius: 4px;
+    padding-top: 100%;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: top center !important;
+    transition: .3s;
 }
 
-/* Icon group */
 .product-btn-group {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 45%;
+    top: 42%;
     left: 50%;
     transform: translateY(-50%);
     transform: translateX(-50%);
@@ -153,11 +201,11 @@
     z-index: 99;
 }
 
-.product-img:hover a img {
+.product-item:hover .product-img a .background-img {
     opacity: .6;
 }
 
-.product-img:hover .product-btn-group {
+.product-item:hover .product-img .product-btn-group {
     opacity: 1;
 }
 
@@ -200,7 +248,10 @@
 }
 
 .product-details {
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
 }
 
 .product-rating i {
@@ -216,7 +267,6 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--black-color);
-    margin-top: 2px;
 }
 
 /* Footer before */

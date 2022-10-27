@@ -37,13 +37,14 @@ $(document).ready(function () {
 // Product Slider
 $(document).ready(function () {
     $(".product-list").slick({
-        slidesToShow: 4,
-        infinity: true,
+        rows: 3,
+        slidesToShow: 5,
+        slidesToScroll: 4,
+        infinity: false,
         autoplay: false,
         autoplaySpeed: 4000,
         speed: 1000,
         arrows: false,
-        slidesToScroll: 4,
     });
 });
 

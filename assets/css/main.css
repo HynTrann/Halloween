@@ -114,6 +114,8 @@
 .body__section1-img {
     float: left;
     margin: 6px 26px 0 0;
+    width: 70px;
+    height: 68px;
 }
 
 .body__section1-text {

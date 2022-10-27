@@ -323,7 +323,7 @@ function renderProduct() {
         <div class="product-item col">
             <div class="product-img">
                 <a href="">
-                    <img src="${product[i].picture}" alt="">
+                    <div style="background: url(${product[i].picture});" class="background-img"></div>
                 </a>
                 <div class="product-btn-group">
                     <!-- Wish List -->
@@ -341,16 +341,18 @@ function renderProduct() {
                 </div>
             </div>
             <div class="product-details">
-                <div class="product-rating">
-                    <i class="product-star--gold fas fa-star"></i>
-                    <i class="product-star--gold fas fa-star"></i>
-                    <i class="product-star--gold fas fa-star"></i>
-                    <i class="product-star--gold fas fa-star"></i>
-                    <i class="product-star--gold fas fa-star"></i>
-                </div>
-                <div style="font-weight: 400;" class="cate-title">
-                    <a href="">${product[i].name}</a>
-                </div>
+                <div>
+                    <div class="product-rating">
+                        <i class="product-star--gold fas fa-star"></i>
+                        <i class="product-star--gold fas fa-star"></i>
+                        <i class="product-star--gold fas fa-star"></i>
+                        <i class="product-star--gold fas fa-star"></i>
+                        <i class="product-star--gold fas fa-star"></i>
+                    </div>
+                    <div style="font-weight: 400;" class="cate-title">
+                        <a href="">${product[i].name}</a>
+                    </div>
+                </div>    
                 <div class="product-price">
                     ${product[i].price}
                 </div>
