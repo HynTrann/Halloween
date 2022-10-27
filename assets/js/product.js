@@ -373,3 +373,7 @@ function renderProduct() {
     }
 }
 renderProduct();
+
+// Filter
+arrFilter = product.filter(product => product.type == 'chocolate')
+console.log(arrFilter);
