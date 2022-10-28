@@ -1,3 +1,5 @@
+// const { render } = require("react-dom/cjs/react-dom.production.min");
+
 // Product
 const product = [
     {
@@ -314,16 +316,16 @@ const product = [
     },
 ];
 
-function renderProduct() {
+function renderProduct(type) {
     let productList = document.querySelector(".product-list");
-    for (let i = 0; i < product.length; i++) {
+    for (let i = 0; i < type.length; i++) {
         productList.insertAdjacentHTML(
             "beforeend",
             `
         <div class="product-item col">
             <div class="product-img">
                 <a href="">
-                    <div style="background: url(${product[i].picture});" class="background-img"></div>
+                    <div style="background: url(${type[i].picture});" class="background-img"></div>
                 </a>
                 <div class="product-btn-group">
                     <!-- Wish List -->
@@ -350,11 +352,11 @@ function renderProduct() {
                         <i class="product-star--gold fas fa-star"></i>
                     </div>
                     <div style="font-weight: 400;" class="cate-title">
-                        <a href="">${product[i].name}</a>
+                        <a href="">${type[i].name}</a>
                     </div>
                 </div>    
                 <div class="product-price">
-                    ${product[i].price}
+                    ${type[i].price}
                 </div>
             </div>
         </div>
@@ -371,9 +373,19 @@ function renderProduct() {
             }
         };
     }
-}
-renderProduct();
-
-// Filter
-arrFilter = product.filter(product => product.type == 'chocolate')
-console.log(arrFilter);
+};
+let arrFilterChocolate = product.filter(product => product.type == 'chocolate');
+let arrFilterCandy = product.filter(product => product.type == 'candy');
+document.querySelector("#chocolate").addEventListener("click",() => {
+    renderProduct(arrFilterChocolate);
+    console.log();
+});
+document.querySelector("#candy").addEventListener("click",() => {
+    renderProduct(arrFilterCandy);
+})
+document.querySelector("#all").addEventListener("click",() => {
+    renderProduct(product)
+})
+document.querySelector("#reset").addEventListener("click",() => {
+    window.location.reload();
+})
