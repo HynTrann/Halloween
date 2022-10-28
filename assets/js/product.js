@@ -373,19 +373,9 @@ function renderProduct(type) {
             }
         };
     }
-};
-let arrFilterChocolate = product.filter(product => product.type == 'chocolate');
-let arrFilterCandy = product.filter(product => product.type == 'candy');
-document.querySelector("#chocolate").addEventListener("click",() => {
-    renderProduct(arrFilterChocolate);
-    console.log();
-});
-document.querySelector("#candy").addEventListener("click",() => {
-    renderProduct(arrFilterCandy);
-})
-document.querySelector("#all").addEventListener("click",() => {
-    renderProduct(product)
-})
-document.querySelector("#reset").addEventListener("click",() => {
-    window.location.reload();
-})
+}
+renderProduct();
+
+// Filter
+arrFilter = product.filter(product => product.type == 'chocolate')
+console.log(arrFilter);

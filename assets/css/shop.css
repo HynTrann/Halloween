@@ -164,7 +164,7 @@
 
 .product-item:hover {
     box-shadow: 0 2px 20px 0 rgb(0 0 0 / 5%);
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 
 .slick-list {
