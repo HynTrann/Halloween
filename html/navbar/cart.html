@@ -26,7 +26,78 @@
 </head>
 
 <body>
+    <div class="wrapper">
+        <!-- Header -->
+        <div id="header">
+            <div class="header__content grid wide">
+                <!-- Logo -->
+                <div class="header__logo">
+                    <h1><a href="../index.html">Halloween Web</a></h1>
+                </div>
 
+                <!-- Navbar -->
+                <ul class="header__navbar">
+                    <li class="header__navbar-list">
+                        <a href="">Home</a>
+                    </li>
+                    <li class="header__navbar-list">
+                        <a href="">Category</a>
+                    </li>
+                    <li class="header__navbar-list">
+                        <a href="">Products</a>
+                    </li>
+                    <li class="header__navbar-list">
+                        <a href="">Search</a>
+                    </li>
+                    <li class="header__navbar-list">
+                        <a href="">User</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <h1>Your Cart</h1>
+        <div id="cartProductContainer"></div>
+    </div>
+    <script type="module">
+        let cartArr = JSON.parse(localStorage.getItem('cart'));
+        function renderProduct() {
+            let productList = document.querySelector("#cartProductContainer");
+            for (let i = 0; i < cartArr.length; i++) {
+                cartProductContainer.insertAdjacentHTML(
+                    "beforeend",
+                    `
+                    <div class="product-item col">
+                        <div class="product-img">
+                            <a href="">
+                                <div style="background: url(${cartArr[i].picture});" class="background-img"></div>
+                            </a>
+                        </div>
+                        <div class="product-details">
+                            <div>
+                                <div class="product-rating">
+                                    <i class="product-star--gold fas fa-star"></i>
+                                    <i class="product-star--gold fas fa-star"></i>
+                                    <i class="product-star--gold fas fa-star"></i>
+                                    <i class="product-star--gold fas fa-star"></i>
+                                    <i class="product-star--gold fas fa-star"></i>
+                                </div>
+                                <div style="font-weight: 400;" class="cate-title">
+                                    <a href="">${cartArr[i].name}</a>
+                                </div>
+                            </div>    
+                            <div class="product-price">
+                                ${cartArr[i].price}
+                            </div>
+                        </div>
+                    </div>
+                `
+                );
+            }
+        }
+        renderProduct();
+    </script>
 </body>
 
 </html>
