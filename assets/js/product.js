@@ -316,16 +316,16 @@ const product = [
     },
 ];
 
-function renderProduct(type) {
+function renderProduct() {
     let productList = document.querySelector(".product-list");
-    for (let i = 0; i < type.length; i++) {
+    for (let i = 0; i < product.length; i++) {
         productList.insertAdjacentHTML(
             "beforeend",
             `
         <div class="product-item col">
             <div class="product-img">
                 <a href="">
-                    <div style="background: url(${type[i].picture});" class="background-img"></div>
+                    <div style="background: url(${product[i].picture});" class="background-img"></div>
                 </a>
                 <div class="product-btn-group">
                     <!-- Wish List -->
@@ -352,11 +352,11 @@ function renderProduct(type) {
                         <i class="product-star--gold fas fa-star"></i>
                     </div>
                     <div style="font-weight: 400;" class="cate-title">
-                        <a href="">${type[i].name}</a>
+                        <a href="">${product[i].name}</a>
                     </div>
                 </div>    
                 <div class="product-price">
-                    ${type[i].price}
+                    ${product[i].price}
                 </div>
             </div>
         </div>
