@@ -240,7 +240,7 @@ const product = [
         price: "$2.12",
         name: "MOUNDS standard bar",
         picture:
-            "https://shop.hersheys.com/dw/image/v2/BCVS_PRD/on/demandware.static/-/Sites-master-us/default/dw800bf6f7/images/hi-res/hsy-000319_1.png?sw=400&sh=400&sm=fit",
+            "https://s7d2.scene7.com/is/image/hersheysassets/0_34000_00031_9_701_00310_029_Item_Front?fmt=webp-alpha&hei=576&qlt=75",
     },
     {
         type: "chocolate",
@@ -325,7 +325,7 @@ function renderProduct() {
         <div class="product-item col">
             <div class="product-img">
                 <a href="">
-                    <div style="background: url(${product[i].picture});" class="background-img"></div>
+                    <div style="background-image: url(${product[i].picture});" class="background-img"></div>
                 </a>
                 <div class="product-btn-group">
                     <!-- Wish List -->

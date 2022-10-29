@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../assets/css/base.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/shop.css">
+    <link rel="stylesheet" href="../../assets/css/cart.css">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="../../assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
@@ -29,37 +30,74 @@
     <div class="wrapper">
         <!-- Header -->
         <div id="header">
-            <div class="header__content grid wide">
-                <!-- Logo -->
-                <div class="header__logo">
-                    <h1><a href="../index.html">Halloween Web</a></h1>
-                </div>
+            <div class="grid wide">
+                <div class="header__content">
+                    <!-- Logo -->
+                    <div class="header__logo">
+                        <h1><a href="../index.html">Halloween Web</a></h1>
+                    </div>
 
-                <!-- Navbar -->
-                <ul class="header__navbar">
+                    <!-- Navbar -->
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="../navbar/shop.html">
+                                Back to Shop
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="">
+                                <i class="header__navbar-icon far fa-circle-question"></i>
+                                Help
+                            </a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="">
+                                <i class="header__navbar-icon far fa-bell"></i>
+                                Notification
+                            </a>
+                            <div class="header__notification"></div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <!-- <input type="text" class="header__search-input" placeholder="Search..."> -->
+                            <button class="header__search-btn">
+                                <i class="header__search-icon fas fa-search"></i>
+                            </button>
+                        </li>
+                        <li class="header__navbar-item">
+                            <div class="header__cart">
+                                <a href="../navbar/cart.html">
+                                    <i class="header__cart-icon fas fa-shopping-cart"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Navbar -->
+            <!-- <ul class="header__navbar">
                     <li class="header__navbar-list">
                         <a href="">Home</a>
                     </li>
-                    <li class="header__navbar-list">
-                        <a href="">Category</a>
-                    </li>
-                    <li class="header__navbar-list">
-                        <a href="">Products</a>
-                    </li>
-                    <li class="header__navbar-list">
-                        <a href="">Search</a>
-                    </li>
-                    <li class="header__navbar-list">
-                        <a href="">User</a>
-                    </li>
-                </ul>
+                </ul> -->
+        </div>
+
+        <!-- Body -->
+        <div id="body">
+            <div class="grid wide">
+                <h1>Your Cart</h1>
+                <div id="cartProductContainer">
+
+                </div>
             </div>
         </div>
     </div>
-    <div id="body">
-        <h1>Your Cart</h1>
-        <div id="cartProductContainer"></div>
-    </div>
+
     <script type="module">
         let cartArr = JSON.parse(localStorage.getItem('cart'));
         function renderProduct() {

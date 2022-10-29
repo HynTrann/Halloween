@@ -1,25 +1,12 @@
 /* Header */
-.header-container {
-    position: relative;
+.header__search-btn {
+    background: none;
+    cursor: pointer;
+    color: var(--white-color);
+    text-transform: uppercase;
 }
 
-.header-abs {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.sub__header {}
-
-.header__navbar-list {}
-
-.header__main {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 12px;
-}
-
+/* Homepage */
 .homepage {
     background: url(../imgs/shop-background.jpg) no-repeat center;
     background-size: cover;
@@ -49,12 +36,12 @@
 }
 
 .homepage button a {
-    padding: 4px 20px;
+    padding: 2px 20px;
 }
 
 .box-heading {
     text-align: center;
-    margin: 76px 0 30px;
+    margin: 76px 0 46px;
 }
 
 .box-heading h1 {
@@ -203,9 +190,10 @@
 .background-img {
     border-radius: 4px;
     padding-top: 100%;
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    background-position: top center !important;
+    background-color: var(--white-color);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
     transition: .3s;
 }
 
