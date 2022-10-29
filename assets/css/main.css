@@ -19,37 +19,37 @@
     letter-spacing: -0.025em;
 }
 
-.header__navbar {
+.header__navbar-list {
     display: flex;
+    justify-content: flex-end;
     align-items: flex-end;
     margin-left: 20px;
 }
 
-.header__navbar-list {
-    margin-left: 40px;
+.header__navbar-item {
+    margin-left: 28px;
     opacity: .7;
     transition: .4s;
 }
 
-.header__navbar-list a {
+.header__navbar-item a {
     font-family: 'Fredoka One', cursive;
     text-transform: uppercase;
     color: var(--white-color);
     font-size: 1.4rem;
+    letter-spacing: .7px;
 }
 
-.header__navbar-list:hover {
+.header__navbar-item:hover {
     opacity: 1;
 }
 
-.header__navbar-list i {
-    display: block;
-    text-align: center;
+.header__navbar-item i {
     font-size: 1.2rem;
     margin-bottom: 2px;
 }
 
-.header__navbar-list--active {
+.header__navbar-item--active {
     opacity: 1;
 }
 

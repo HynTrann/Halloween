@@ -1,3 +1,25 @@
+/* Header */
+.header-container {
+    position: relative;
+}
+
+.header-abs {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sub__header {}
+
+.header__navbar-list {}
+
+.header__main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 12px;
+}
+
 .homepage {
     background: url(../imgs/shop-background.jpg) no-repeat center;
     background-size: cover;
