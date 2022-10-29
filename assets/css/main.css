@@ -1,7 +1,10 @@
 /* Header */
 #header {
+    position: fixed;
+    width: 1080px;
     background-color: var(--black-color);
-    padding: 26px 0 26px;
+    padding: 26px 0;
+    transition: .4s;
     z-index: 1;
 }
 
@@ -56,7 +59,7 @@
 /* Body */
 /* Slider */
 .body__slider {
-    margin: 12px 0 36px;
+    margin-bottom: 36px;
 }
 
 .slider__image img {
@@ -169,7 +172,7 @@
 #footer {
     font-size: 1.2rem;
     background: #e3e0da;
-    padding: 24px 0;
+    padding-top: 24px;
     margin-top: 40px;
 }
 

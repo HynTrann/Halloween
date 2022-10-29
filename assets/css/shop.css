@@ -176,11 +176,6 @@
     transform: scale(1.05);
 }
 
-.slick-list {
-    margin: 0 -12px;
-    padding: 12px;
-}
-
 .product-img {
     position: relative;
     margin-bottom: 10px;
@@ -344,12 +339,11 @@
 
 .footer-download {
     display: flex;
-    justify-content: space-between;
 }
 
 .appstore img,
 .googleplay img {
-    height: 34px;
+    height: 80%;
 }
 
 .footer-heading {
