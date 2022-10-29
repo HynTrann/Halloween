@@ -1,6 +1,7 @@
 /* Header */
 #header {
     position: fixed;
+    top: 0;
     width: 1080px;
     background-color: var(--black-color);
     padding: 26px 0;
@@ -57,6 +58,10 @@
 }
 
 /* Body */
+#body {
+    margin-top: 80px;
+}
+
 /* Slider */
 .body__slider {
     margin-bottom: 36px;
