@@ -1,0 +1,29 @@
+.cart-item {}
+
+.cart-img {
+    height: 90%;
+    width: 100%;
+}
+
+.cart-details {
+    height: 100%;
+}
+
+.cart-name {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    height: 1.8rem;
+    letter-spacing: .3px;
+    color: #000000;
+    transition: .2s;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.cart-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--black-color);
+}

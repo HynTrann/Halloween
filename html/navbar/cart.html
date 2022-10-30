@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Cart</title>
     <link rel="icon" href="../../assets/imgs/logo.png">
     <!-- Slick Slider CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -42,7 +42,7 @@
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item">
                             <a href="../navbar/shop.html">
-                                Back to Shop
+                                Back to store
                             </a>
                         </li>
                         <li class="header__navbar-item">
@@ -89,10 +89,29 @@
         </div>
 
         <!-- Body -->
-        <div id="body">
+        <div id="body" style="height: 100vh;">
             <div class="grid wide">
-                <h1>Your Cart</h1>
-                <div id="cartProductContainer">
+                <h1>Your Cart Here</h1>
+                <div id="cartProductContainer" class="row">
+                    <!-- Item -->
+                    <div class="col l-6">
+                        <div class="cart-item row">
+                            <div class="col l-5">
+                                <img class="cart-img"
+                                    src="https://s7d2.scene7.com/is/image/hersheysassets/0_34000_11032_2_701_11032_004_Item_Front?fmt=webp-alpha&hei=908&qlt=75"
+                                    alt="">
+                            </div>
+                            <div class="col l-7">
+                                <div class="cart-details">
+                                    <div class="cart-name"><a href="">1</a></div>
+                                    <div class="cart-price">
+                                        123
+                                        <button class="buy-btn">Buy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -106,8 +125,7 @@
             let productList = document.querySelector("#cartProductContainer");
             for (let i = 0; i < cartArr.length; i++) {
                 cartProductContainer.insertAdjacentHTML(
-                    "beforeend",
-                    `
+                    "beforeend", `
                     <div class="product-item col">
                         <div class="product-img">
                             <a href="">

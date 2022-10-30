@@ -208,8 +208,8 @@ a:hover {
     background-color: #d52e01;
 }
 
-.slick-active button {
-    background-color: #d52e01 !important;
+li.slick-active>button {
+    background-color: #d52e01;
 }
 
 /* Scroll Bar */
