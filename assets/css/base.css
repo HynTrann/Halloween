@@ -192,7 +192,7 @@ a:hover {
 
 .slick-dots li button {
     position: relative;
-    bottom: 2px;
+    bottom: 4px;
     font-size: 0;
     width: 16px;
     height: 16px;
@@ -206,6 +206,10 @@ a:hover {
 
 .slick-dots li button:hover {
     background-color: #d52e01;
+}
+
+.slick-active button {
+    background-color: #d52e01 !important;
 }
 
 /* Scroll Bar */
