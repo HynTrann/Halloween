@@ -15,6 +15,10 @@ body {
     padding: 0px;
 }
 
+button {
+    border: none;
+}
+
 ul,
 li {
     margin: 0px;
