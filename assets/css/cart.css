@@ -1,0 +1,17 @@
+.cart {
+    margin-top: 30px;
+}
+
+.background-img {
+    padding-top: 100px;
+}
+
+.button-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-wrapper > button {
+    cursor: pointer;
+}

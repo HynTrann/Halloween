@@ -17,6 +17,11 @@
 </head>
 
 <body>
+    <script>
+        if (localStorage.getItem('user')) {
+            window.location.href = '/html/';
+        }
+    </script>
     <div class="container">
         <p>Please login</p>
         <div class="title">

@@ -31,7 +31,7 @@
     <div class="wrapper">
         <!-- Header -->
         <div id="header">
-            <div class="grid wide">
+            <div class="grid wide mt-5">
                 <div class="header__content">
                     <!-- Logo -->
                     <div class="header__logo">
@@ -71,7 +71,7 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="header__navbar-item">
+                        <li class="header__navbar-item" id="auth">
                             <a href="">
                                 <i class="fa-regular fa-user"></i>
                             </a>
@@ -79,64 +79,80 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- Navbar -->
-            <!-- <ul class="header__navbar">
-                    <li class="header__navbar-list">
-                        <a href="">Home</a>
-                    </li>
-                </ul> -->
         </div>
 
         <!-- Body -->
         <div id="body">
             <div class="grid wide">
-                <h1>Your Cart</h1>
-                <div id="cartProductContainer">
+                <div class="row">
+                    <div class="col l-12">
+                        <div class="cart">
+                            <h1>Your Cart</h1>
+                            <div id="cartProductContainer">
 
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="button-wrapper">
+                <button class="btn-default">Pay</button>
             </div>
         </div>
     </div>
 
+    <script src="../../assets/js/auth.js"></script>
     <script src="../../assets/js/main.js"></script>
     <script type="module">
         let cartArr = JSON.parse(localStorage.getItem('cart'));
-        function renderProduct() {
-            let productList = document.querySelector("#cartProductContainer");
-            for (let i = 0; i < cartArr.length; i++) {
-                cartProductContainer.insertAdjacentHTML(
-                    "beforeend",
-                    `
-                    <div class="product-item col">
-                        <div class="product-img">
-                            <a href="">
-                                <div style="background: url(${cartArr[i].picture});" class="background-img"></div>
-                            </a>
-                        </div>
-                        <div class="product-details">
-                            <div>
-                                <div class="product-rating">
-                                    <i class="product-star--gold fas fa-star"></i>
-                                    <i class="product-star--gold fas fa-star"></i>
-                                    <i class="product-star--gold fas fa-star"></i>
-                                    <i class="product-star--gold fas fa-star"></i>
-                                    <i class="product-star--gold fas fa-star"></i>
+        if (cartArr == null) {
+            cartArr = [];
+        }
+        if (cartArr.length > 0) {
+            function renderProduct() {
+                let productList = document.querySelector("#cartProductContainer");
+                for (let i = 0; i < cartArr.length; i++) {
+                    cartProductContainer.insertAdjacentHTML(
+                        "beforeend",
+                        `
+                        <div class="product-item col">
+                            <div class="product-img">
+                                <a href="">
+                                    <div style="background-image: url(${cartArr[i].picture});" class="background-img"></div>
+                                </a>
+                            </div>
+                            <div class="product-details">
+                                <div>
+                                    <div class="product-rating">
+                                        <i class="product-star--gold fas fa-star"></i>
+                                        <i class="product-star--gold fas fa-star"></i>
+                                        <i class="product-star--gold fas fa-star"></i>
+                                        <i class="product-star--gold fas fa-star"></i>
+                                        <i class="product-star--gold fas fa-star"></i>
+                                    </div>
+                                    <div style="font-weight: 400;" class="cate-title">
+                                        <a href="">${cartArr[i].name}</a>
+                                    </div>
+                                </div>    
+                                <div class="product-price">
+                                    ${cartArr[i].price}
                                 </div>
-                                <div style="font-weight: 400;" class="cate-title">
-                                    <a href="">${cartArr[i].name}</a>
-                                </div>
-                            </div>    
-                            <div class="product-price">
-                                ${cartArr[i].price}
                             </div>
                         </div>
-                    </div>
-                `
-                );
+                    `
+                    );
+                }
             }
+            renderProduct();
+            document.querySelector(".btn-default").addEventListener("click", function () {
+                localStorage.removeItem("cart");
+                alert("Thanks for your purchase!");
+                window.location.href = "/html/navbar/shop.html";
+            });
+        } else {
+            document.querySelector(".btn-default").remove();
         }
-        renderProduct();
     </script>
 </body>
 

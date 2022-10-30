@@ -322,52 +322,46 @@ function renderProduct() {
         productList.insertAdjacentHTML(
             "beforeend",
             `
-        <div class="product-item col">
-            <div class="product-img">
-                <a href="#">
-                    <div style="background-image: url(${product[i].picture});" class="background-img"></div>
-                </a>
-                <div class="product-btn-group">
-                    <!-- Wish List -->
-                    <button data-title="Add to Wish List" class="product-btn product-btn-wishList">
-                        <i class="fa-regular fa-heart"></i>
-                    </button>
-                    <!-- Quick View -->
-                    <button data-title="Quick view" class="product-btn product-btn-quickView">
-                        <i class="fa-regular fa-eye"></i>
-                    </button>
-                    <!-- Add To Cart -->
-                    <button id="add${i}" data-title="Add to Cart" class="product-btn product-btn-addToCart">
-                        <i class="ti-shopping-cart"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="product-details">
-                <div>
-                    <div class="product-rating">
-                        <i class="product-star--gold fas fa-star"></i>
-                        <i class="product-star--gold fas fa-star"></i>
-                        <i class="product-star--gold fas fa-star"></i>
-                        <i class="product-star--gold fas fa-star"></i>
-                        <i class="product-star--gold fas fa-star"></i>
+                <div class="product-item col">
+                    <div class="product-img">
+                        <a href="#">
+                            <div style="background-image: url(${product[i].picture});" class="background-img"></div>
+                        </a>
+                        <div class="product-btn-group">
+                            <!-- Add To Cart -->
+                            <button id="add${i}" data-title="Add to Cart" class="product-btn product-btn-addToCart">
+                                <i class="ti-shopping-cart"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div style="font-weight: 400;" class="cate-title">
-                        <a href="#">${product[i].name}</a>
+                    <div class="product-details">
+                        <div>
+                            <div class="product-rating">
+                                <i class="product-star--gold fas fa-star"></i>
+                                <i class="product-star--gold fas fa-star"></i>
+                                <i class="product-star--gold fas fa-star"></i>
+                                <i class="product-star--gold fas fa-star"></i>
+                                <i class="product-star--gold fas fa-star"></i>
+                            </div>
+                            <div style="font-weight: 400;" class="cate-title">
+                                <a href="#">${product[i].name}</a>
+                            </div>
+                        </div>    
+                        <div class="product-price">
+                            ${product[i].price}
+                        </div>
                     </div>
-                </div>    
-                <div class="product-price">
-                    ${product[i].price}
                 </div>
-            </div>
-        </div>
-        `
+            `
         );
+
         document.querySelector(`#add${i}`).onclick = function () {
             if (localStorage.getItem("user") != null) {
                 let cart = JSON.parse(localStorage.getItem("cart"));
                 if (cart == null) cart = [];
                 cart.push(product[i]);
                 localStorage.setItem("cart", JSON.stringify(cart));
+                alert(`Added ${product[i].name} to cart`);
             } else {
                 alert("Please Login");
             }
@@ -377,5 +371,5 @@ function renderProduct() {
 renderProduct();
 
 // Filter
-arrFilter = product.filter(product => product.type == 'chocolate')
+arrFilter = product.filter((product) => product.type == "chocolate");
 console.log(arrFilter);
