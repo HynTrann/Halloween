@@ -6,7 +6,7 @@
     background-color: var(--black-color);
     padding: 26px 0;
     transition: .4s;
-    z-index: 1;
+    z-index: 10;
 }
 
 .header__content {
