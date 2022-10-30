@@ -222,3 +222,8 @@ a:hover {
 ::-webkit-scrollbar-track {
     background-color: #484a49;
 }
+
+::selection {
+    background: #cd201f;
+    color: var(--white-color);
+}
