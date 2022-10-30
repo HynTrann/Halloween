@@ -84,14 +84,10 @@
         <!-- Body -->
         <div id="body" style="height: 100vh;">
             <div class="grid wide">
-                <div class="row">
-                    <div class="col l-12">
-                        <div class="cart">
-                            <h1>Your Cart</h1>
-                            <div id="cartProductContainer">
+                <div class="cart">
+                    <h1 style="margin: 12px 0;">Your Cart</h1>
+                    <div id="cartProductContainer" class="row">
 
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -116,7 +112,7 @@
                     cartProductContainer.insertAdjacentHTML(
                         "beforeend",
                         `
-                        <div class="product-item col">
+                        <div class="product-item col l-4">
                             <div class="product-img">
                                 <a href="">
                                     <div style="background-image: url(${cartArr[i].picture});" class="background-img"></div>
