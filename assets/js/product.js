@@ -53,7 +53,7 @@ const product = [
     {
         type: "candy",
         section: "normal",
-        price: "$16normal",
+        price: "$16",
         name: "Hershey and Mondelez Fruit Flavored Assortment Chewy and Hard Candy Bulk",
         picture:
             "https://shop.hersheys.com/dw/image/v2/BCVS_PRD/on/demandware.static/-/Sites-master-us/default/dw99585a1d/images/hi-res/hsy-951802_1.png?sw=400&sh=400&sm=fit",
@@ -324,7 +324,7 @@ function renderProduct() {
             `
         <div class="product-item col">
             <div class="product-img">
-                <a href="">
+                <a href="#">
                     <div style="background-image: url(${product[i].picture});" class="background-img"></div>
                 </a>
                 <div class="product-btn-group">
@@ -352,7 +352,7 @@ function renderProduct() {
                         <i class="product-star--gold fas fa-star"></i>
                     </div>
                     <div style="font-weight: 400;" class="cate-title">
-                        <a href="">${product[i].name}</a>
+                        <a href="#">${product[i].name}</a>
                     </div>
                 </div>    
                 <div class="product-price">

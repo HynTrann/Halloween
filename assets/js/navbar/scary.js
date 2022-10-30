@@ -49,10 +49,10 @@ for (let i = 0; i < bodyListScary.length; i++) {
                     </div>
                     <div class="col l-7">
                         <h2 class="mg-top-18">
-                            <a class="thickItalicLink" href="">${bodyListScary[i].title}</a>
+                            <a class="thickItalicLink" href="#">${bodyListScary[i].title}</a>
                         </h2>
                         <p class="mg-top-8">${bodyListScary[i].text}</p>
-                        <a href="" class="btn-default mg-top-20">Read More</a>
+                        <a href="#" class="btn-default mg-top-20">Read More</a>
                     </div>
                 </div>
             </div>
